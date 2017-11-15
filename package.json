@@ -1,0 +1,32 @@
+{
+  "name": "react-native-dual-background",
+  "version": "1.0.0",
+  "description": "View, ScrollView, ListView and FlatList with dual background",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sospedra/react-native-dual-background.git"
+  },
+  "keywords": [
+    "react-native",
+    "background",
+    "color",
+    "dual",
+    "scrollview",
+    "flatlist",
+    "listview"
+  ],
+  "author": "Ruben Sospedra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sospedra/react-native-dual-background/issues"
+  },
+  "homepage": "https://github.com/sospedra/react-native-dual-background#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
