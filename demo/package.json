@@ -1,28 +1,26 @@
 {
-  "name": "demo",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-native-scripts": "1.7.0",
-    "jest-expo": "^22.0.0",
-    "react-test-renderer": "16.0.0-beta.5"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "reinstall": "yarn uninstall react-native-dual-background && yarn add file:../",
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
-  "dependencies": {
-    "expo": "^22.0.2",
-    "react": "16.0.0-beta.5",
-    "react-native": "^0.49.5",
-    "react-native-dual-background": "file:../"
-  }
+	"name": "demo",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"reinstall": "yarn remove react-native-dual && yarn add file:../",
+		"dev": "react-devtools"
+	},
+	"dependencies": {
+		"react": "16.0.0",
+		"react-native": "0.50.3",
+		"react-native-dual": "file:../"
+	},
+	"devDependencies": {
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"jest": "21.2.1",
+		"react-devtools": "^3.0.0",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
 }
