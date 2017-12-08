@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, ScrollView, Dimensions } from 'react-native'
+import { View, ListView } from 'react-native'
 
 import { innerStyle, contentProps } from './services'
 
@@ -10,8 +10,6 @@ import { innerStyle, contentProps } from './services'
  * - top is the ListView's self backgroundColor
  *
  * The renderHeader is given the BOUNCE_MARGIN height to create the dual effect
- *
- * @constructor
  */
 export default function DualListView ({ bottom, children, top, ...props }) {
   const renderHeader = () => (
@@ -25,11 +23,12 @@ export default function DualListView ({ bottom, children, top, ...props }) {
     <ListView
       {...props}
       {...contentProps(props, bottom, top)}
+      renderHeader={renderHeader}
     />
   )
 }
 
 DualListView.propTypes = {
   bottom: PropTypes.string.isRequired,
-  top: PropTypes.string.isRequired,
+  top: PropTypes.string.isRequired
 }

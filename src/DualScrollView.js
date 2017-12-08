@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, ScrollView, Dimensions } from 'react-native'
+import { View, ScrollView } from 'react-native'
 
 import { innerStyle, contentProps } from './services'
 
@@ -11,8 +11,6 @@ import { innerStyle, contentProps } from './services'
  *
  * The ScrollView contains an extra top-placed child with the BOUNCE_MARGIN
  * height to create the dual effect
- *
- * @constructor
  */
 export default function DualScrollView ({ bottom, children, top, ...props }) {
   return (
@@ -28,5 +26,5 @@ export default function DualScrollView ({ bottom, children, top, ...props }) {
 
 DualScrollView.propTypes = {
   bottom: PropTypes.string.isRequired,
-  top: PropTypes.string.isRequired,
+  top: PropTypes.string.isRequired
 }

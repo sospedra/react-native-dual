@@ -28,5 +28,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
   }
 }
