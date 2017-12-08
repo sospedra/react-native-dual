@@ -2,19 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, ScrollView, Dimensions } from 'react-native'
 
-const BOUNCE_MARGIN = Dimensions.get('window').height / 3
-const mergeProp = (prop, enrichment) => {
-  return prop ? Object.assign({}, prop, enrichment) : enrichment
-}
+import { innerStyle, contentProps } from './services'
 
-export default function DualScrollView ({ bottom, children, top, ...props }) {
-  const contentContainerStyle = mergeProp(props.contentContainerStyle, { backgroundColor: top })
-  const contentInset = mergeProp(props.contentInset, { top: -BOUNCE_MARGIN })
-  const contentOffset = mergeProp(props.contentOffset, { top: -BOUNCE_MARGIN })
-  const style = mergeProp(props.style, { backgroundColor: bottom })
+/**
+ * A ListView assigns the colors as follows:
+ * - bottom is the ListView's contentContainerStyle backgroundColor
+ * - top is the ListView's self backgroundColor
+ *
+ * The renderHeader is given the BOUNCE_MARGIN height to create the dual effect
+ *
+ * @constructor
+ */
+export default function DualListView ({ bottom, children, top, ...props }) {
   const renderHeader = () => (
     <View>
-      <View style={{height: SPACER_SIZE}} />
+      <View style={innerStyle} />
       {props.renderHeader && <props.renderHeader />}
     </View>
   )
@@ -22,16 +24,12 @@ export default function DualScrollView ({ bottom, children, top, ...props }) {
   return (
     <ListView
       {...props}
-      contentContainerStyle={contentContainerStyle}
-      contentInset={contentInset}
-      contentOffset={contentOffset}
-      renderHeader={renderHeader}
-      style={style}
+      {...contentProps(props, bottom, top)}
     />
   )
 }
 
-DualScrollView.propTypes = {
+DualListView.propTypes = {
   bottom: PropTypes.string.isRequired,
   top: PropTypes.string.isRequired,
 }
