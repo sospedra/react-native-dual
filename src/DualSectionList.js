@@ -29,6 +29,6 @@ export default function DualSectionList ({ bottom, children, top, ...props }) {
 }
 
 DualSectionList.propTypes = {
-  bottom: PropTypes.string.isRequired,
+  bottom: PropTypes.string,
   top: PropTypes.string.isRequired
 }

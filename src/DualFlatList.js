@@ -29,6 +29,6 @@ export default function DualFlatList ({ bottom, children, top, ...props }) {
 }
 
 DualFlatList.propTypes = {
-  bottom: PropTypes.string.isRequired,
+  bottom: PropTypes.string,
   top: PropTypes.string.isRequired
 }

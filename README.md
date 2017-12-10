@@ -1,10 +1,10 @@
 # react-native-dual
-ScrollView, ListView and FlatList with dual background
+ScrollView, FlatList, SectionList and ListView with vertical dual background
 
 ### Usage
 
 Instead of using normal React Native component favour the Dual one and share two
-special props: `bottom` and `top` to set the colors you want to display.
+special props: **`bottom` and `top` to set the colors you want to display**.
 
 ```js
 <DualScrollView
@@ -32,3 +32,17 @@ If you don't specify a `bottom` color will fallback to the component style
   <Text>Saturn</Text>
 </DualScrollView>
 ```
+
+### API
+
+Exposed components are:
+
+* DualFlatList
+* DualListView (notice will be deprecated by React Native in the future)
+* DualScrollView
+* DualSectionList
+
+And all of them intakes both `top` and `bottom` props:
+
+* `top: string`
+* `bottom?: string`
