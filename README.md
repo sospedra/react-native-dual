@@ -1,6 +1,12 @@
 # react-native-dual
 ScrollView, FlatList, SectionList and ListView with vertical dual background
 
+### Check the demo ([live](https://expo.io/@sospedra/react-native-dual-demo) | [source](https://github.com/sospedra/react-native-dual-demo))
+
+| Before (problem) | After (with dual)   |
+|------------------|-------------------|
+| ![no-dual](https://user-images.githubusercontent.com/3116899/33805424-f3b0875e-ddb8-11e7-8353-352c6bceee75.gif) | ![with-dual](https://user-images.githubusercontent.com/3116899/33805413-c0db71e0-ddb8-11e7-89d0-d1aebbaf7b3b.gif) |
+
 ### Usage
 
 Instead of using normal React Native component favour the Dual one and share two
