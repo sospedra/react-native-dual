@@ -29,6 +29,6 @@ export default function DualListView ({ bottom, children, top, ...props }) {
 }
 
 DualListView.propTypes = {
-  bottom: PropTypes.string.isRequired,
+  bottom: PropTypes.string,
   top: PropTypes.string.isRequired
 }
