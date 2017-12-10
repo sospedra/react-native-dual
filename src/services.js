@@ -18,7 +18,7 @@ export const mergeProp = (shouldEnrich = true, prop = {}, enrichment) => {
 export const contentProps = (props, bottom, top) => ({
   contentContainerStyle: mergeProp(!!top, props.contentContainerStyle),
   contentInset: mergeProp(props.contentInset, { top: -BOUNCE_MARGIN }),
-  contentOffset: mergeProp(props.contentOffset, { y: -BOUNCE_MARGIN }),
+  contentOffset: mergeProp(props.contentOffset, { y: BOUNCE_MARGIN }),
   style: mergeProp(!!bottom, props.style, { backgroundColor: bottom })
 })
 
