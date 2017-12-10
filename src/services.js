@@ -1,6 +1,6 @@
 import { Dimensions } from 'react-native'
 
-export const BOUNCE_MARGIN = Dimensions.get('window').height / 3
+export const BOUNCE_MARGIN = Dimensions.get('window').height / 2
 
 /**
  * Merge the original prop with the lib enrichment
@@ -16,12 +16,13 @@ export const mergeProp = (shouldEnrich = true, prop = {}, enrichment) => {
 }
 
 export const contentProps = (props, bottom, top) => ({
-  contentContainerStyle: mergeProp(!!top, props.contentContainerStyle, { backgroundColor: top }),
+  contentContainerStyle: mergeProp(!!top, props.contentContainerStyle),
   contentInset: mergeProp(props.contentInset, { top: -BOUNCE_MARGIN }),
-  contentOffset: mergeProp(props.contentOffset, { top: -BOUNCE_MARGIN }),
+  contentOffset: mergeProp(props.contentOffset, { y: -BOUNCE_MARGIN }),
   style: mergeProp(!!bottom, props.style, { backgroundColor: bottom })
 })
 
-export const innerStyle = {
-  height: BOUNCE_MARGIN
-}
+export const innerStyle = (top) => ({
+  backgroundColor: top,
+  height: BOUNCE_MARGIN,
+})

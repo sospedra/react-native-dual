@@ -18,13 +18,13 @@ export default function DualScrollView ({ bottom, children, top, ...props }) {
       {...props}
       {...contentProps(props, bottom, top)}
     >
-      <View style={innerStyle} />
+      <View style={innerStyle(top)} />
       {children}
     </ScrollView>
   )
 }
 
 DualScrollView.propTypes = {
-  bottom: PropTypes.string.isRequired,
+  bottom: PropTypes.string,
   top: PropTypes.string.isRequired
 }

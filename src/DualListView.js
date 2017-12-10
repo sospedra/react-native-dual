@@ -14,7 +14,7 @@ import { innerStyle, contentProps } from './services'
 export default function DualListView ({ bottom, children, top, ...props }) {
   const renderHeader = () => (
     <View>
-      <View style={innerStyle} />
+      <View style={innerStyle(top)} />
       {props.renderHeader && <props.renderHeader />}
     </View>
   )
