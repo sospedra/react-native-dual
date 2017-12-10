@@ -12,10 +12,10 @@ import { innerStyle, contentProps } from './services'
  * The renderHeader is given the BOUNCE_MARGIN height to create the dual effect
  */
 export default function DualFlatList ({ bottom, children, top, ...props }) {
-  const renderHeader = () => (
+  const ListHeaderComponent = () => (
     <View>
       <View style={innerStyle(top)} />
-      {props.renderHeader && <props.renderHeader />}
+      {props.ListHeaderComponent && <props.ListHeaderComponent />}
     </View>
   )
 
@@ -23,7 +23,7 @@ export default function DualFlatList ({ bottom, children, top, ...props }) {
     <FlatList
       {...props}
       {...contentProps(props, bottom, top)}
-      renderHeader={renderHeader}
+      ListHeaderComponent={ListHeaderComponent}
     />
   )
 }
