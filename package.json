@@ -1,6 +1,6 @@
 {
   "name": "react-native-dual",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "View, ScrollView, ListView and FlatList with dual background",
   "main": "src/index.js",
   "files": [
