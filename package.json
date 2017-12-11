@@ -7,7 +7,9 @@
     "src/"
   ],
   "scripts": {
-    "test": "jest"
+    "test:lint": "standard",
+    "test:unit": "jest",
+    "test": "npm run test:lint && npm run test:unit"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,15 @@
     "react-native": "*"
   },
   "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^21.2.1",
+    "react": "*",
+    "react-native": "*",
+    "react-test-renderer": "^16.2.0",
     "standard": "^10.0.3"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
