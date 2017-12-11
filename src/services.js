@@ -1,3 +1,4 @@
+import React from 'react'
 import { Dimensions, Platform, View } from 'react-native'
 
 const IS_ANDROID = Platform.OS === 'android'
