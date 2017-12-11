@@ -1,4 +1,11 @@
 # react-native-dual
+
+[![Build Status](https://travis-ci.org/sospedra/react-native-dual.svg?branch=master)](https://travis-ci.org/sospedra/react-native-dual)
+[![Maintainability](https://api.codeclimate.com/v1/badges/aab125f23f20b1bf1856/maintainability)](https://codeclimate.com/github/sospedra/react-native-dual/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/aab125f23f20b1bf1856/test_coverage)](https://codeclimate.com/github/sospedra/react-native-dual/test_coverage)
+[![David](https://img.shields.io/david/sospedra/react-native-dual.svg)]()
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ScrollView, FlatList, SectionList and ListView with vertical dual background
 
 ### Check the demo ([live](https://expo.io/@sospedra/react-native-dual-demo) | [source](https://github.com/sospedra/react-native-dual-demo))
