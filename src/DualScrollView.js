@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, ScrollView } from 'react-native'
 
-import { innerStyle, contentProps } from './services'
+import { getBounceCorrection, contentProps } from './services'
 
 /**
  * A ScrollView assigns the colors as follows:
@@ -18,7 +18,7 @@ export default function DualScrollView ({ bottom, children, top, ...props }) {
       {...props}
       {...contentProps(props, bottom, top)}
     >
-      <View style={innerStyle(top)} />
+      {getBounceCorrection(top)}
       {children}
     </ScrollView>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, FlatList } from 'react-native'
 
-import { innerStyle, contentProps } from './services'
+import { getListHeader, contentProps } from './services'
 
 /**
  * A FlatList assigns the colors as follows:
@@ -12,18 +12,11 @@ import { innerStyle, contentProps } from './services'
  * The renderHeader is given the BOUNCE_MARGIN height to create the dual effect
  */
 export default function DualFlatList ({ bottom, children, top, ...props }) {
-  const ListHeaderComponent = () => (
-    <View>
-      <View style={innerStyle(top)} />
-      {props.ListHeaderComponent && <props.ListHeaderComponent />}
-    </View>
-  )
-
   return (
     <FlatList
       {...props}
       {...contentProps(props, bottom, top)}
-      ListHeaderComponent={ListHeaderComponent}
+      ListHeaderComponent={getListHeader(props.ListHeaderComponent, top)}
     />
   )
 }
