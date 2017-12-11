@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sospedra/react-native-dual.svg?branch=master)](https://travis-ci.org/sospedra/react-native-dual)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/sospedra/react-native-dual.svg)]()
-https://img.shields.io/codeclimate/c/sospedra/react-native-dual.svg
+[![Code Climate](https://img.shields.io/codeclimate/c/sospedra/react-native-dual.svg)]()
 [![David](https://img.shields.io/david/sospedra/react-native-dual.svg)]()
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
