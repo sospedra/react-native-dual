@@ -46,7 +46,7 @@ export const contentProps = (props, bottom, top) => ({
 export const getBounceCorrection = (top) => {
   return IS_ANDROID ? null : <View style={{
     backgroundColor: top,
-    height: BOUNCE_MARGIN,
+    height: BOUNCE_MARGIN
   }} />
 }
 

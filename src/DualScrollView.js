@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, ScrollView } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import { getBounceCorrection, contentProps } from './services'
 

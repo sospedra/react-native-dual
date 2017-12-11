@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, ListView } from 'react-native'
+import { ListView } from 'react-native'
 
 import { getListHeader, contentProps } from './services'
 

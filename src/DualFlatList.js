@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, FlatList } from 'react-native'
+import { FlatList } from 'react-native'
 
 import { getListHeader, contentProps } from './services'
 
