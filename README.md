@@ -6,7 +6,7 @@
 [![David](https://img.shields.io/david/sospedra/react-native-dual.svg)]()
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-ScrollView, FlatList, SectionList and ListView with vertical dual background
+ScrollView, FlatList, SectionList, DualVirtualizedList and ListView with vertical dual background
 
 ### Check the demo ([live](https://expo.io/@sospedra/react-native-dual-demo) | [source](https://github.com/sospedra/react-native-dual-demo))
 
@@ -54,6 +54,7 @@ Exposed components are:
 * DualListView (notice will be deprecated by React Native in the future)
 * DualScrollView
 * DualSectionList
+* DualVirtualizedList
 
 And all of them intakes both `top` and `bottom` props:
 
