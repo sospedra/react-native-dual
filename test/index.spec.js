@@ -48,7 +48,7 @@ describe('react-native-dual suite', () => {
       render () {
         return <DualListView top='#8e44ad' style={{ backgroundColor: COLOR }}
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text key={rowData}>{rowData}</Text>}
+          renderRow={(rowData, idx) => <Text key={idx}>{rowData}</Text>}
         />
       }
     }

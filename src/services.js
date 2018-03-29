@@ -64,7 +64,7 @@ export const getListHeader = (ListHeader, top) => {
   if (IS_ANDROID && ListHeader) return ListHeader
 
   return () => (
-    <View>
+    <View key='dual-list-header'>
       {getBounceCorrection(top)}
       {ListHeader && <ListHeader />}
     </View>

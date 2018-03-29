@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ScrollView } from 'react-native'
+import { ScrollView, Animated } from 'react-native'
 
 import { getBounceCorrection, contentProps } from './services'
 
@@ -13,18 +13,21 @@ import { getBounceCorrection, contentProps } from './services'
  * height to create the dual effect
  */
 export default function DualScrollView ({ bottom, children, top, ...props }) {
+  const Component = props.animated ? Animated.ScrollView : ScrollView
+
   return (
-    <ScrollView
+    <Component
       {...props}
       {...contentProps(props, bottom, top)}
     >
       {getBounceCorrection(top)}
       {children}
-    </ScrollView>
+    </Component>
   )
 }
 
 DualScrollView.propTypes = {
+  animated: PropTypes.bool,
   bottom: PropTypes.string,
   top: PropTypes.string.isRequired
 }
