@@ -59,3 +59,7 @@ And all of them intakes both `top` and `bottom` props:
 
 * `top: string`
 * `bottom?: string`
+
+Also `ScrollView` accepts:
+
+* `animated: bool` - switch from `ScrollView` component to `Animated.ScrollView`
